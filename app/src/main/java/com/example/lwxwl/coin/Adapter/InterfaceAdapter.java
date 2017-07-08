@@ -6,6 +6,7 @@ import com.example.lwxwl.coin.Model.AddBudget;
 import com.example.lwxwl.coin.Model.AddBudgetUser;
 import com.example.lwxwl.coin.Model.Budget;
 import com.example.lwxwl.coin.Model.BudgetUser;
+import com.example.lwxwl.coin.Model.Cost;
 import com.example.lwxwl.coin.Model.Login;
 import com.example.lwxwl.coin.Model.LoginUser;
 import com.example.lwxwl.coin.Model.Profile;
@@ -41,9 +42,17 @@ public interface InterfaceAdapter {
     @POST("api/view_budget/")
     Call<Budget> getBudget(@Body BudgetUser budgetUser);
 
-
+    @GET("api/get_one/<int:month>/")
+    Call<Cost> getCost(@Query("sum")int sum, @Header("token")String token);
 
 }
+/*
+Url : api/get_one/<int:month>/    get
+Headers : token
+Return data {
+	“sum” : int
+}
+ */
 /*
 注册：
         URL： api/signup/

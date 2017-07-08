@@ -5,8 +5,9 @@ public class Application extends android.app.Application {
     public static String storedUsername;
     public static String storedUserToken;
     public static int storedUserAddBudget;
+    public static int storedUserBudget;
     public static int storedUserMonth;
-    public static int storedUserDate;
+    public static int storedUserDay;
 
 
     @Override
@@ -36,6 +37,14 @@ public class Application extends android.app.Application {
         return storedUserAddBudget;
     }
 
+    public void getUserBudget(int budget) {
+        storedUserBudget = budget;
+    }
+
+    public int setUserBudget() {
+        return storedUserBudget;
+    }
+
     public void getUserMonth(int month) {
         storedUserMonth = month;
     }
@@ -44,11 +53,11 @@ public class Application extends android.app.Application {
         return storedUserMonth;
     }
 
-    public void getUserDate(int date) {
-        storedUserDate = date;
+    public void getUserDate(int day) {
+        storedUserDay = day;
     }
 
     public int setUserDate() {
-        return storedUserDate;
+        return storedUserDay;
     }
 }

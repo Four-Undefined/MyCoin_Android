@@ -22,7 +22,7 @@ public class MonthlyFragment extends Fragment {
     @Nullable
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_monthly, container, false);//关联布局文件
+        View view = inflater.inflate(R.layout.fragment_monthly, container, false);
         WebView wvMonthly = (WebView) view.findViewById(R.id.wv_monthly);
         wvMonthly.getSettings().setJavaScriptEnabled(true);
         wvMonthly.setWebViewClient(new WebViewClient());

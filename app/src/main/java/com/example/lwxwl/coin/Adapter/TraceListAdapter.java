@@ -1,4 +1,4 @@
-package com.example.lwxwl.coin.Adapter;
+/*package com.example.lwxwl.coin.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -83,3 +83,4 @@ public class TraceListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
     }
 }
+*/

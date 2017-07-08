@@ -7,16 +7,16 @@
 
     <string name="edit_name">请输入用户名</string>
     <string name="edit_password">请输入密码</string>
-    <string name="user_existed">已有账号，去登陆 ></string>
+    <string name="user_existed">已有账号，去登录 ></string>
     <string name="go_to_register">快速注册 ></string>
-    <string name="login">登陆</string>
+    <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="exit">退出登录</string>
     <string name="tip_password_can_not_be_empty">密码不能为空</string>
     <string name="count_down">%ss</string>
     <string name="reset_pwd">重置密码</string>
     <string name="register_successfully">注册成功</string>
-    <string name="login_successfully">登陆成功</string>
+    <string name="login_successfully">登录成功</string>
     <string name="tip_please_input_6_32_password">请输入6-32位密码</string>
     <string name="input_again">重新输入</string>
     <string name="tip_please_input_4_20_name">请输入4—20位用户名</string>
@@ -56,15 +56,6 @@
     <string name="today_view_last_month">Last Month</string>
     <string name="today_view_this_year">This Year</string>
     <string name="today_view_last_year">Last Year</string>
-
-    <string name="today_empty">New day!</string>
-    <string name="yesterday_empty">No records.</string>
-    <string name="this_week_empty">New week!</string>
-    <string name="last_week_empty">No records.</string>
-    <string name="this_month_empty">New month!</string>
-    <string name="last_month_empty">No records.</string>
-    <string name="this_year_empty">Happy new year!</string>
-    <string name="last_year_empty">No records.</string>
 
     <string name="tag_eat">饮食</string>
     <string name="tag_hung">出行</string>

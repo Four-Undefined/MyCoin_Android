@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -8,6 +8,7 @@
     tools:context="com.example.lwxwl.coin.Fragment.DataFragment">
 
     <LinearLayout
+        android:id="@+id/llTop"
         android:padding="16dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -97,7 +98,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <!--<LinearLayout
         android:id="@+id/llList"
         android:layout_marginTop="32dp"
         android:layout_width="wrap_content"
@@ -106,6 +107,12 @@
         <include
             layout="@layout/activity_trace"
             />
-    </LinearLayout>
+    </LinearLayout>-->
+    <WebView
+        android:id="@+id/wv_time"
+        android:layout_below="@+id/llTop"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
 
-</LinearLayout>
+
+</RelativeLayout>

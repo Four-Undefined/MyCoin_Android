@@ -3,8 +3,6 @@ package com.example.lwxwl.coin.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -82,7 +80,7 @@ public class CoinMainActivity extends AppCompatActivity{
         });
 
         setupViewPager(viewPager);
-        initView();
+        //initView();
 
     }
 
@@ -97,6 +95,8 @@ public class CoinMainActivity extends AppCompatActivity{
         viewPager.setAdapter(adapter);
     }
 
+
+    /*
     private void initView() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
@@ -104,7 +104,10 @@ public class CoinMainActivity extends AppCompatActivity{
         writeFragment = new WriteFragment();
         profileFragment = new ProfileFragment();
         ft.commit();
+
     }
+
+
 
     @Override
     protected void onResume() {
@@ -136,4 +139,6 @@ public class CoinMainActivity extends AppCompatActivity{
         }
         super.onResume();
     }
+    */
+
 }

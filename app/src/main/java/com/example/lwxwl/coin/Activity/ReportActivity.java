@@ -122,6 +122,7 @@ public class ReportActivity extends FragmentActivity implements View.OnClickList
     }
 
     private void InitView() {
+        btn_back = (ImageButton) findViewById(R.id.btn_back);
         btn_lately = (Button) findViewById(R.id.btn_lately);
         btn_monthly = (Button) findViewById(R.id.btn_monthly);
         toolbar2 = (Toolbar) findViewById(R.id.toolbar_report);

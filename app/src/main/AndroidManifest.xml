@@ -35,10 +35,6 @@
 
         <activity android:name=".Activity.ReportActivity"/>
 
-        <activity android:name=".Activity.TraceActivity"/>
-
-        <activity android:name=".Activity.ChooseAvatarActivity"/>
-
     </application>
 
 </manifest>

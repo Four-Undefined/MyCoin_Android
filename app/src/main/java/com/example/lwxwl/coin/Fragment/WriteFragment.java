@@ -17,6 +17,8 @@ import com.example.lwxwl.coin.Model.AccountingUser;
 import com.example.lwxwl.coin.R;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import java.util.Calendar;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -39,12 +41,16 @@ public class WriteFragment extends Fragment {
     Retrofit retrofit;
     InterfaceAdapter interfaceAdapter;
 
-    /*
+    Calendar c = Calendar.getInstance();
+    int month = c.get(Calendar.MONTH);
+    int day = c.get(Calendar.DAY_OF_MONTH);
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-    }*/
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -89,7 +95,7 @@ public class WriteFragment extends Fragment {
                 ivTag.setImageResource(R.drawable.ic_eat);
                 tvTag.setText(R.string.tag_eat);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_eat));
-                AccountingUser user = new AccountingUser(money, 0, 0, 0, 0, 0);
+                AccountingUser user = new AccountingUser(money, 0, 0, 0, 0, 0, month, day);
                 Call<Accounting> call = interfaceAdapter.getAccounting(user);
                 call.enqueue(new Callback<Accounting>() {
                     @Override
@@ -107,44 +113,122 @@ public class WriteFragment extends Fragment {
         btn_hung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                money = Integer.parseInt(edit_money.getText().toString());
                 ivTag.setImageResource(R.drawable.ic_hung);
                 tvTag.setText(R.string.tag_hung);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_hung));
+                AccountingUser user = new AccountingUser(0, money, 0, 0, 0, 0, month, day);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                call.enqueue(new Callback<Accounting>() {
+                    @Override
+                    public void onResponse(Call<Accounting> call, Response<Accounting> response) {
+                        Accounting accounting = response.body();
+                    }
+
+                    @Override
+                    public void onFailure(Call<Accounting> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
             }
         });
         btn_cloth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                money = Integer.parseInt(edit_money.getText().toString());
                 ivTag.setImageResource(R.drawable.ic_cloth);
                 tvTag.setText(R.string.tag_cloth);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_cloth));
+                AccountingUser user = new AccountingUser(0, 0, money, 0, 0, 0, month, day);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                call.enqueue(new Callback<Accounting>() {
+                    @Override
+                    public void onResponse(Call<Accounting> call, Response<Accounting> response) {
+                        Accounting accounting = response.body();
+                    }
+
+                    @Override
+                    public void onFailure(Call<Accounting> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
             }
         });
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                money = Integer.parseInt(edit_money.getText().toString());
                 ivTag.setImageResource(R.drawable.ic_play);
                 tvTag.setText(R.string.tag_play);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_play));
+                AccountingUser user = new AccountingUser(0, 0, 0, money, 0, 0, month, day);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                call.enqueue(new Callback<Accounting>() {
+                    @Override
+                    public void onResponse(Call<Accounting> call, Response<Accounting> response) {
+                        Accounting accounting = response.body();
+                    }
+
+                    @Override
+                    public void onFailure(Call<Accounting> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
+            }
+        });
+        btn_education.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                money = Integer.parseInt(edit_money.getText().toString());
+                ivTag.setImageResource(R.drawable.ic_education);
+                tvTag.setText(R.string.tag_education);
+                tvTag.setTextColor(getResources().getColor(R.color.ic_education));
+                AccountingUser user = new AccountingUser(0, 0, 0, 0, money, 0, month, day);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                call.enqueue(new Callback<Accounting>() {
+                    @Override
+                    public void onResponse(Call<Accounting> call, Response<Accounting> response) {
+                        Accounting accounting = response.body();
+                    }
+
+                    @Override
+                    public void onFailure(Call<Accounting> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
             }
         });
         btn_general.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                money = Integer.parseInt(edit_money.getText().toString());
                 ivTag.setImageResource(R.drawable.ic_general);
                 tvTag.setText(R.string.tag_general);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_general));
+                AccountingUser user = new AccountingUser(0, 0, 0, 0, 0, money, month, day);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                call.enqueue(new Callback<Accounting>() {
+                    @Override
+                    public void onResponse(Call<Accounting> call, Response<Accounting> response) {
+                        Accounting accounting = response.body();
+                    }
+
+                    @Override
+                    public void onFailure(Call<Accounting> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
             }
         });
         return view;
     }
 
-    /*
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
-    */
+
 
 }
 

@@ -67,7 +67,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edit_name"
-            android:hint="@string/edit_name"
+            android:hint="@string/edit_password"
             app:met_baseColor="@color/purple"
             app:met_iconLeft="@drawable/ic_password"
             app:met_iconPadding="0dp"

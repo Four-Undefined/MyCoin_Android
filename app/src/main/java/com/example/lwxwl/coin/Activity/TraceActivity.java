@@ -1,4 +1,4 @@
-package com.example.lwxwl.coin.Activity;
+/*package com.example.lwxwl.coin.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -39,3 +39,4 @@ public class TraceActivity extends AppCompatActivity {
         rvTrace.setAdapter(adapter);
     }
 }
+*/

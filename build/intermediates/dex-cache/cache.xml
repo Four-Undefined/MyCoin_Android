@@ -2,148 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-watcher/1.5.1/3d719b7e20a11415d409e6c29a34a643c560fc6f/leakcanary-watcher-1.5.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/lwxwl/Desktop/Coin/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="3d719b7e20a11415d409e6c29a34a643c560fc6f">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/leakcanary-watcher-1.5.1_6e796b47f7204b7f1700f5e110bdaea2e634f991.jar" />
+        sha1="7428cabe4d30fa467a8e376d63d0e5e697bb185e">
+        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ee510b4baf662e6e8b0795de0d84f4219e9337a3/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.android/build-cache/1d78995df95075e18de11e634b79e9f36c2d0c01/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/lwxwl/Desktop/Coin/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="288913b440a3c61c30aa171095453a605432277a">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/classes_c3b39abb3ac59d365240f4f221ad8b7902b7b37f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0-beta4/de5935a367ba5e343e9df786ac8fc0c7d52b5f0c/converter-gson-2.0.0-beta4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta4_23abe968ba157ea630bb197fde234640008b9b06.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.android/build-cache/1ef2aff19303bb4c72ba56c1426af18d26e23967/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="1acfba708364fb5bdb0ad5910d1ca8bb1125f645">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/classes_fe10ded799a4304e83feff997d018b0d2705c727.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.android/build-cache/c348479edfdcac113972e50e937764542539ef10/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4fbaa84da04e25bb7812592814026101d20dbc91">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/classes_00fe776b740b71c1ab666d93ed35e6d7f94bfffe.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.0-beta4/739e00dea1f0ac04fdb9b6160d667e23cc50a791/retrofit-2.0.0-beta4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta4_eb2e2815dd9bf7fa41378e8d80412a17bbabfacc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.android/build-cache/230c83068d174016c4be4c3024847dc10938a237/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a73b24a82e860ae409181afee75925a04a03aed3">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/classes_2c57154cfa5a0334370b9dfbadd05640287189a8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.android/build-cache/65547e40ddb87975216f2b5e124e209f1ec7ca03/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/classes_cb955222411d35a0d4cdaebb012f988d17262bb2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/library-2.4.0_7abd66f2c860a7ecac517658e03882055e87165a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.1.2/7052283359001bb108753cb0583a887d3bf94c82/okhttp-3.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7052283359001bb108753cb0583a887d3bf94c82">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/okhttp-3.1.2_b1f2226c277efa5e753c512402e7dfd2bb980760.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/okio-1.6.0_40db0744fb855dba1d0c76dbad3e90f19ac5ba98.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-scalars/2.0.0-beta4/f8685e25bc7f076913e2b51996cbc19ef7eb05df/converter-scalars-2.0.0-beta4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f8685e25bc7f076913e2b51996cbc19ef7eb05df">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/converter-scalars-2.0.0-beta4_31ad0a367261dbae575eb59adc58e33f70237286.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.1.2/a1b4b8e4dc5f7bfa9186e79f9e267c1539a847b0/logging-interceptor-3.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a1b4b8e4dc5f7bfa9186e79f9e267c1539a847b0">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/logging-interceptor-3.1.2_ce33b6718fcdec41075e6c4efae8ccdf0a2b9a7e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.haha/haha/2.0.3/640a438d2d415c056ca6a673ac26b183b044e160/haha-2.0.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="640a438d2d415c056ca6a673ac26b183b044e160">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/haha-2.0.3_461689a3f3b6f51278e5895917070da7f424a070.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-analyzer/1.5.1/77e5213b6ac5b323616a7bd283763bd60c0b3f6f/leakcanary-analyzer-1.5.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="77e5213b6ac5b323616a7bd283763bd60c0b3f6f">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/leakcanary-analyzer-1.5.1_f25d67b8d637227b83c3cac0c1bdec1843e0836a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lwxwl/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/pre-dexed/debug/gson-2.4_41d365dda49549f82ef73faf5b68bd24b1629f78.jar" />
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/lwxwl/Desktop/Coin/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_eb404469cb30005b81eb39aa6e31166d693e9339/classes.dex" />
     </item>
 
 </items>

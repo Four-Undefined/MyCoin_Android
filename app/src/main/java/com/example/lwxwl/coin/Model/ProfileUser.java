@@ -1,8 +1,5 @@
 package com.example.lwxwl.coin.Model;
 
-/**
- * Created by lwxwl on 2017/7/7.
- */
 
 public class ProfileUser {
 

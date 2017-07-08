@@ -1,6 +1,5 @@
 package com.example.lwxwl.coin.Activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.lwxwl.coin.Adapter.InterfaceAdapter;
 import com.example.lwxwl.coin.Model.Application;
@@ -18,6 +16,7 @@ import com.example.lwxwl.coin.Model.Login;
 import com.example.lwxwl.coin.Model.LoginUser;
 import com.example.lwxwl.coin.R;
 import com.example.lwxwl.coin.Utils.ConnectionUtils;
+import com.example.lwxwl.coin.Utils.ToastUtils;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.Calendar;
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     Calendar c = Calendar.getInstance();
     int month = c.get(Calendar.MONTH);
-    int date = c.get(Calendar.DAY_OF_MONTH);
+    int day = c.get(Calendar.DAY_OF_MONTH);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     if ((userPassword.length() >= 6 && userPassword.length() <= 32)) {
 
                         Application.storedUsername = user_name.getText().toString();
-                        LoginUser user = new LoginUser(userName, userPassword, month, date);
+                        LoginUser user = new LoginUser(userName, userPassword, month, day);
                         Call<Login> call = interfaceAdapter.getUserToken(user);
                         call.enqueue(new Callback<Login>() {
                             @Override
@@ -101,12 +100,11 @@ public class MainActivity extends AppCompatActivity {
                                 Login bean = response.body();
                                 if (response.code() == 200) {
                                     Application.storedUserToken = bean.getToken();
-                                    Context con = MainActivity.this;
-                                    Toast.makeText(con , R.string.login_successfully, Toast.LENGTH_SHORT).show();
+                                    ToastUtils.showShort(MainActivity.this, R.string.login_successfully);
                                     Intent intent = new Intent(MainActivity.this, CoinMainActivity.class);
                                     startActivity(intent);
                                 }
-                                if(response.code()==502) {
+                                if(response.code() == 502) {
                                     Snackbar.make(llLogin, R.string.login_error,Snackbar.LENGTH_INDEFINITE)
                                             .setAction(R.string.input_again, new View.OnClickListener() {
                                                 @Override

@@ -62,8 +62,6 @@ public class BudgetActivity extends AppCompatActivity {
                 .build();
         interfaceAdapter = retrofit.create(InterfaceAdapter.class);
 
-        edit_budget.setText(Application.storedUserAddBudget);
-
         // 不保存数据
         btn_clear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +76,12 @@ public class BudgetActivity extends AppCompatActivity {
         btn_done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int budget = Integer.parseInt(edit_budget.getText().toString());
+                int budget = 0;
+                try {
+                    budget = Integer.parseInt(edit_budget.getText().toString());
+                } catch (Exception e) {
+                    budget = 0;
+                }
                 Application.storedUserAddBudget = budget;
                 AddBudgetUser user = new AddBudgetUser(budget, month);
                 Call<AddBudget> call = interfaceAdapter.getAddBudget(user);
