@@ -68,7 +68,7 @@ public class DataFragment extends Fragment {
         WebView wvTime = (WebView) view.findViewById(R.id.wv_time);
         wvTime.getSettings().setJavaScriptEnabled(true);
         wvTime.setWebViewClient(new WebViewClient());
-        wvTime.loadUrl("http://www.baidu.com");
+        wvTime.loadUrl("http://120.77.246.73:5488/List/get_list/");
 
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();

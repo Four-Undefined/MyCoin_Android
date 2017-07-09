@@ -45,7 +45,7 @@ public class ReportActivity extends FragmentActivity implements View.OnClickList
             public void onClick(View v) {
                 try {
                     //设置打开的页面地址
-                    webView.loadUrl("http://www.baidu.com");
+                    webView.loadUrl("http://120.77.246.73:5488/List/get_seven/");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -57,7 +57,7 @@ public class ReportActivity extends FragmentActivity implements View.OnClickList
             @Override
             public void onClick(View v) {
                 try {
-                    webView.loadUrl("http://www.baidu.com");
+                    webView.loadUrl("http://120.77.246.73:5488/List/get_month/");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
