@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.lwxwl.coin.Adapter.InterfaceAdapter;
 import com.example.lwxwl.coin.Model.Accounting;
 import com.example.lwxwl.coin.Model.AccountingUser;
+import com.example.lwxwl.coin.Model.Application;
 import com.example.lwxwl.coin.R;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
@@ -35,6 +36,7 @@ public class WriteFragment extends Fragment {
     private TextView tvTag;
     private MaterialEditText edit_money;
     private ImageButton btn_eat, btn_hung, btn_cloth, btn_play, btn_education, btn_general;
+    private String Money;
     private int money;
 
     HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -88,15 +90,21 @@ public class WriteFragment extends Fragment {
                         .commit();
             }
         });
+
         btn_eat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                money = Integer.parseInt(edit_money.getText().toString());
+                Money = edit_money.getText().toString();
+                try {
+                    money = Integer.parseInt(Money);
+                } catch (NumberFormatException e) {
+                    money = 0;
+                }
                 ivTag.setImageResource(R.drawable.ic_eat);
                 tvTag.setText(R.string.tag_eat);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_eat));
                 AccountingUser user = new AccountingUser(money, 0, 0, 0, 0, 0, month, day);
-                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user, Application.storedUserToken);
                 call.enqueue(new Callback<Accounting>() {
                     @Override
                     public void onResponse(Call<Accounting> call, Response<Accounting> response) {
@@ -113,12 +121,17 @@ public class WriteFragment extends Fragment {
         btn_hung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                money = Integer.parseInt(edit_money.getText().toString());
+                Money = edit_money.getText().toString();
+                try {
+                    money = Integer.parseInt(Money);
+                } catch (NumberFormatException e) {
+                    money = 0;
+                }
                 ivTag.setImageResource(R.drawable.ic_hung);
                 tvTag.setText(R.string.tag_hung);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_hung));
                 AccountingUser user = new AccountingUser(0, money, 0, 0, 0, 0, month, day);
-                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user, Application.storedUserToken);
                 call.enqueue(new Callback<Accounting>() {
                     @Override
                     public void onResponse(Call<Accounting> call, Response<Accounting> response) {
@@ -135,12 +148,17 @@ public class WriteFragment extends Fragment {
         btn_cloth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                money = Integer.parseInt(edit_money.getText().toString());
+                Money = edit_money.getText().toString();
+                try {
+                    money = Integer.parseInt(Money);
+                } catch (NumberFormatException e) {
+                    money = 0;
+                }
                 ivTag.setImageResource(R.drawable.ic_cloth);
                 tvTag.setText(R.string.tag_cloth);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_cloth));
                 AccountingUser user = new AccountingUser(0, 0, money, 0, 0, 0, month, day);
-                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user, Application.storedUserToken);
                 call.enqueue(new Callback<Accounting>() {
                     @Override
                     public void onResponse(Call<Accounting> call, Response<Accounting> response) {
@@ -157,12 +175,17 @@ public class WriteFragment extends Fragment {
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                money = Integer.parseInt(edit_money.getText().toString());
+                Money = edit_money.getText().toString();
+                try {
+                    money = Integer.parseInt(Money);
+                } catch (NumberFormatException e) {
+                    money = 0;
+                }
                 ivTag.setImageResource(R.drawable.ic_play);
                 tvTag.setText(R.string.tag_play);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_play));
                 AccountingUser user = new AccountingUser(0, 0, 0, money, 0, 0, month, day);
-                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user, Application.storedUserToken);
                 call.enqueue(new Callback<Accounting>() {
                     @Override
                     public void onResponse(Call<Accounting> call, Response<Accounting> response) {
@@ -179,12 +202,17 @@ public class WriteFragment extends Fragment {
         btn_education.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                money = Integer.parseInt(edit_money.getText().toString());
+                Money = edit_money.getText().toString();
+                try {
+                    money = Integer.parseInt(Money);
+                } catch (NumberFormatException e) {
+                    money = 0;
+                }
                 ivTag.setImageResource(R.drawable.ic_education);
                 tvTag.setText(R.string.tag_education);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_education));
                 AccountingUser user = new AccountingUser(0, 0, 0, 0, money, 0, month, day);
-                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user, Application.storedUserToken);
                 call.enqueue(new Callback<Accounting>() {
                     @Override
                     public void onResponse(Call<Accounting> call, Response<Accounting> response) {
@@ -201,12 +229,17 @@ public class WriteFragment extends Fragment {
         btn_general.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                money = Integer.parseInt(edit_money.getText().toString());
+                Money = edit_money.getText().toString();
+                try {
+                    money = Integer.parseInt(Money);
+                } catch (NumberFormatException e) {
+                    money = 0;
+                }
                 ivTag.setImageResource(R.drawable.ic_general);
                 tvTag.setText(R.string.tag_general);
                 tvTag.setTextColor(getResources().getColor(R.color.ic_general));
                 AccountingUser user = new AccountingUser(0, 0, 0, 0, 0, money, month, day);
-                Call<Accounting> call = interfaceAdapter.getAccounting(user);
+                Call<Accounting> call = interfaceAdapter.getAccounting(user, Application.storedUserToken);
                 call.enqueue(new Callback<Accounting>() {
                     @Override
                     public void onResponse(Call<Accounting> call, Response<Accounting> response) {

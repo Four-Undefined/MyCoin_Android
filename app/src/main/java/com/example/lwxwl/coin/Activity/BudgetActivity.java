@@ -84,7 +84,7 @@ public class BudgetActivity extends AppCompatActivity {
                 }
                 Application.storedUserAddBudget = budget;
                 AddBudgetUser user = new AddBudgetUser(budget, month);
-                Call<AddBudget> call = interfaceAdapter.getAddBudget(user);
+                Call<AddBudget> call = interfaceAdapter.getAddBudget(user, Application.storedUserToken);
                 call.enqueue(new Callback<AddBudget>() {
                     @Override
                     public void onResponse(Call<AddBudget> call, Response<AddBudget> response) {
@@ -93,6 +93,7 @@ public class BudgetActivity extends AppCompatActivity {
                             Application.storedUserAddBudget = addBudget.getBudget();
                             ToastUtils.showShort(BudgetActivity.this, R.string.save_successfully_local);
                             Intent intent = new Intent(BudgetActivity.this, CoinMainActivity.class);
+                            intent.putExtra("id", 1);
                             startActivity(intent);
                         }
                         if(response.code() == 502) {

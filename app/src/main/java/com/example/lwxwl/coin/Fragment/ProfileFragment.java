@@ -2,7 +2,6 @@ package com.example.lwxwl.coin.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -47,7 +46,7 @@ public class ProfileFragment extends Fragment {
     @Nullable
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_write, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
@@ -59,9 +58,9 @@ public class ProfileFragment extends Fragment {
         interfaceAdapter = retrofit.create(InterfaceAdapter.class);
         getUserProfile();
 
-        profile_user_name.setText(Application.storedUsername);
         profile_user_avatar = (CircleImageView) view.findViewById(R.id.profile_user_avatar);
         profile_user_name = (TextView) view.findViewById(R.id.profile_user_name);
+        //profile_user_name.setText(Application.storedUsername);
         btn_exit = (Button) view.findViewById(R.id.btn_exit);
         /*profile_user_avatar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,13 +91,14 @@ public class ProfileFragment extends Fragment {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Call<Profile> call = interfaceAdapter.getProfile(Application.storedUsername, Application.storedUserToken);
+                Call<Profile> call = interfaceAdapter.getProfile(Application.storedUserToken);
                 call.enqueue(new Callback<Profile>() {
                     @Override
                     public void onResponse(Call<Profile> call, Response<Profile> response) {
                         profile = response.body();
-                        Message msg = new Message();
-                        msg.obj = profile;
+                        profile_user_name.setText(profile.getUsername());
+                        //Message msg = new Message();
+                        //msg.obj = profile;
                     }
 
                     @Override

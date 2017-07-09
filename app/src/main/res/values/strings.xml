@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Coin</string>
+    <string name="app_name">MyCoin</string>
     <string name="title_data">明细</string>
     <string name="title_write">记账</string>
     <string name="title_profile">个人中心</string>
@@ -48,14 +48,21 @@
 
     <string name="check">check</string>
 
-    <string name="today_view_today">Today</string>
-    <string name="today_view_yesterday">Yesterday</string>
-    <string name="today_view_this_week">This Week</string>
-    <string name="today_view_last_week">Last Week</string>
-    <string name="today_view_this_month">This Month</string>
-    <string name="today_view_last_month">Last Month</string>
-    <string name="today_view_this_year">This Year</string>
-    <string name="today_view_last_year">Last Year</string>
+    <string name="number0">0</string>
+    <string name="number1">1</string>
+    <string name="number2">2</string>
+    <string name="number3">3</string>
+    <string name="number4">4</string>
+    <string name="number5">5</string>
+    <string name="number6">6</string>
+    <string name="number7">7</string>
+    <string name="number8">8</string>
+    <string name="number9">9</string>
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    <string name="point">.</string>
+    <string name="BackToZero">清零</string>
+    <string name="click_to_ensure">✓</string>
 
     <string name="tag_eat">饮食</string>
     <string name="tag_hung">出行</string>

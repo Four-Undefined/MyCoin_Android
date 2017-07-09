@@ -61,7 +61,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:padding="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
             android:src="@drawable/ic_eat" />
 
         <TextView
@@ -69,13 +71,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:text="@string/tag_eat"
             android:textColor="@color/ic_eat"
             android:textSize="16sp" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edit_money"
-            android:layout_width="300dp"
+            android:layout_width="256dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -84,9 +89,18 @@
             app:met_baseColor="@color/purple"
             app:met_primaryColor="@color/purple"
             android:inputType="number"
-            android:textCursorDrawable="@color/purple"/>
+            android:textCursorDrawable="@color/purple"
+            app:met_underlineColor="@color/purple"
+            />
 
     </LinearLayout>
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"
+        />
 
     <LinearLayout
         android:id="@+id/llTag1"
