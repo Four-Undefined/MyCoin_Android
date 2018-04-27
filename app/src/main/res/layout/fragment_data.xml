@@ -4,11 +4,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/data_fragment"
-    tools:context="com.example.lwxwl.coin.Fragment.DataFragment">
+    android:id="@+id/data_fragment">
 
     <LinearLayout
-        android:id="@+id/llTop"
+        android:id="@+id/ll_top"
         android:padding="16dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         android:background="@color/purple">
 
         <LinearLayout
-            android:id="@+id/llBudget"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -24,21 +22,23 @@
             android:gravity="center"
             >
             <TextView
-                android:id="@+id/tvBudget"
                 android:text="@string/budget2"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
+                android:focusable="true"
                 />
             <TextView
-                android:id="@+id/tvBudget2"
-                android:text="3000"
+                android:id="@+id/txv_budget"
+                tools:text="3000"
                 android:textSize="24sp"
                 android:textColor="@color/yellow"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                />
         </LinearLayout>
 
         <ImageView
@@ -48,7 +48,6 @@
             />
 
         <LinearLayout
-            android:id="@+id/llCost"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -56,21 +55,23 @@
             android:gravity="center"
             >
             <TextView
-                android:id="@+id/tvCost"
                 android:text="@string/cost2"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"/>
+                android:clickable="true"
+                android:focusable="true"/>
 
             <TextView
-                android:id="@+id/tvCost2"
-                android:text="1800"
+                android:id="@+id/txv_cost"
+                tools:text="1800"
                 android:textSize="24sp"
                 android:textColor="@color/yellow"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                />
         </LinearLayout>
 
         <ImageView
@@ -80,7 +81,6 @@
             />
 
         <LinearLayout
-            android:id="@+id/llReport"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -88,31 +88,22 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/ibReport"
+                android:id="@+id/btn_report"
                 android:src="@drawable/ic_report"
-                android:background="@color/purple"
+                android:background="?android:attr/selectableItemBackground"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
 
         </LinearLayout>
     </LinearLayout>
 
-    <!--<LinearLayout
-        android:id="@+id/llList"
-        android:layout_marginTop="32dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <include
-            layout="@layout/activity_trace"
-            />
-    </LinearLayout>-->
     <WebView
         android:id="@+id/wv_time"
-        android:layout_below="@+id/llTop"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
+        android:layout_below="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
 
 
 </RelativeLayout>

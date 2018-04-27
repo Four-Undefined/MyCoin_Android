@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/llLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/ll_login">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,13 +23,13 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="16dp"
             android:src="@drawable/line_top" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="16dp"
             android:text="@string/login"
             android:textColor="@color/white"
             android:textSize="18sp" />
@@ -52,10 +52,10 @@
         android:gravity="center_horizontal">
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/user_name"
+            android:id="@+id/edt_login_name"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="16dp"
             android:hint="@string/edit_name"
             app:met_baseColor="@color/purple"
             app:met_errorColor="@color/pink"
@@ -65,10 +65,10 @@
             android:textCursorDrawable="@color/purple"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/user_password"
+            android:id="@+id/edt_login_password"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/user_name"
+            android:layout_below="@+id/edt_login_name"
             android:hint="@string/edit_password"
             app:met_baseColor="@color/purple"
             app:met_errorColor="@color/pink"
@@ -81,7 +81,7 @@
             android:id="@+id/btn_login"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/user_password"
+            android:layout_below="@+id/edt_login_password"
             android:layout_marginTop="32dp"
             android:background="@color/purple"
             android:text="@string/login"
@@ -89,13 +89,13 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/go_to_register"
+            android:id="@+id/txv_go_to_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@id/btn_login"
             android:layout_alignRight="@id/btn_login"
             android:layout_below="@id/btn_login"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="16dp"
             android:text="@string/go_to_register"
             android:textColor="@color/pink" />
 

@@ -4,37 +4,21 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:id="@+id/write_fragment"
-    tools:context="com.example.lwxwl.coin.Fragment.ProfileFragment">
-
-    <!--
-    <com.example.lwxwl.coin.UI.MyGridView
-        android:id="@+id/gridView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:numColumns="4"
-        android:verticalSpacing="1sp"
-        android:horizontalSpacing="1sp"
-        android:stretchMode="columnWidth"
-        android:background="#ffffff"
-        android:isScrollContainer="false"
-        />
-        -->
+    android:id="@+id/write_fragment">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_cost"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/purple"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         >
 
         <ImageButton
             android:id="@+id/btn_clear_cost"
             android:src="@drawable/ic_clear_24dp"
-            android:background="@color/purple"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -48,26 +32,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
+
+        <ImageButton
+            android:id="@+id/btn_done_cost"
+            android:src="@drawable/ic_done_24dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            />
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
-        android:id="@+id/llInput"
+        android:id="@+id/ll_input"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/ivTag"
+            android:id="@+id/imv_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/ic_eat" />
 
         <TextView
-            android:id="@+id/tvTag"
+            android:id="@+id/txv_tag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -79,13 +72,14 @@
             android:textSize="16sp" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/edit_money"
+            android:id="@+id/edt_money"
             android:layout_width="256dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             app:met_baseColor="@color/purple"
             app:met_primaryColor="@color/purple"
             android:inputType="number"

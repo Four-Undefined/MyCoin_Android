@@ -19,6 +19,7 @@
     <string name="login_successfully">登录成功</string>
     <string name="tip_please_input_6_32_password">请输入6-32位密码</string>
     <string name="input_again">重新输入</string>
+    <string name="username_existed">用户名已存在</string>
     <string name="tip_please_input_4_20_name">请输入4—20位用户名</string>
     <string name="name_length_error">用户名长度不符合要求</string>
     <string name="password_length_error">密码长度不符合要求</string>
@@ -26,6 +27,7 @@
     <string name="check_connection">请检查网络设置</string>
     <string name="go_to_check">前去检查</string>
     <string name="choose">选择</string>
+    <string name="done">done</string>
     <string name="next">下一张</string>
     <string name="save_failed_local">保存失败</string>
     <string name="save_successfully_local">保存成功</string>
@@ -71,6 +73,4 @@
     <string name="tag_education">教育</string>
     <string name="tag_general">一般</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gradle/
+.idea/workspace.xml
+app/libs/
+build/android-profile/profile-2018-04-17-14-08-44-488.rawproto
