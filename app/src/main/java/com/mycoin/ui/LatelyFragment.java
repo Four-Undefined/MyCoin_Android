@@ -14,7 +14,6 @@ import com.mycoin.R;
 
 public class LatelyFragment extends Fragment {
 
-    // private BridgeWebView mBwvLately;
     private WebView mWvLately;
 
     @Override
@@ -28,7 +27,6 @@ public class LatelyFragment extends Fragment {
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_lately, container, false);
 
-        // mBwvLately = (BridgeWebView) view.findViewById(R.id.wv_lately);
         mWvLately = (WebView) view.findViewById(R.id.wv_lately);
         initWebView();
 
@@ -36,14 +34,10 @@ public class LatelyFragment extends Fragment {
     }
 
     private void initWebView() {
-        // WebSettings settings = mBwvLately.getSettings();
-        // settings.setJavaScriptEnabled(true);
-        // settings.setAppCacheEnabled(true);
-        // mBwvLately.setInitData(Application.storedUserToken);
-        // mBwvLately.loadUrl("http://120.77.246.73:5489/week");
         mWvLately.getSettings().setJavaScriptEnabled(true);
         mWvLately.setWebViewClient(new WebViewClient());
-        mWvLately.loadUrl("http://120.77.246.73:5489/week/" + Application.storedUserToken);
+        // http://120.77.246.73:5589/<token>/week
+        mWvLately.loadUrl("http://120.77.246.73:4600/" + Application.storedUserToken + "/week");
     }
 
     @Override

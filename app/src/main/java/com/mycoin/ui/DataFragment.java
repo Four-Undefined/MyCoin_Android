@@ -33,7 +33,6 @@ public class DataFragment extends Fragment implements View.OnClickListener {
 
     private TextView mTxvBudget, mTxvCost;
     private ImageButton mBtnReport;
-    // private BridgeWebView mBwvTime;
     private WebView mWvTime;
 
     HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -57,7 +56,6 @@ public class DataFragment extends Fragment implements View.OnClickListener {
         mTxvBudget = (TextView) view.findViewById(R.id.txv_budget);
         mTxvCost = (TextView) view.findViewById(R.id.txv_cost);
         mBtnReport = (ImageButton) view.findViewById(R.id.btn_report);
-        // mBwvTime = (BridgeWebView) view.findViewById(R.id.wv_time);
         mWvTime = (WebView) view.findViewById(R.id.wv_time);
         mTxvBudget.setOnClickListener(this);
         mTxvCost.setOnClickListener(this);
@@ -73,14 +71,10 @@ public class DataFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initWebView() {
-        // WebSettings settings = mBwvTime.getSettings();
-        // settings.setJavaScriptEnabled(true);
-        // settings.setAppCacheEnabled(true);
-        // mBwvTime.setInitData(Application.storedUserToken);
-        // mBwvTime.loadUrl("http://120.77.246.73:5489/");
         mWvTime.getSettings().setJavaScriptEnabled(true);
         mWvTime.setWebViewClient(new WebViewClient());
-        mWvTime.loadUrl("http://120.77.246.73:5489/" + Application.storedUserToken);
+        // http://120.77.246.73:5589/<token>/list
+        mWvTime.loadUrl("http://120.77.246.73:4600/" + Application.storedUserToken + "/list");
     }
 
     private void initNet() {

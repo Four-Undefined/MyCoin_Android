@@ -14,7 +14,6 @@ import com.mycoin.R;
 
 public class MonthlyFragment extends Fragment {
 
-    // private BridgeWebView mBwvMonthly;
     private WebView mWvMonthly;
 
     @Override
@@ -28,7 +27,6 @@ public class MonthlyFragment extends Fragment {
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_monthly, container, false);
 
-        // mBwvMonthly = (BridgeWebView) view.findViewById(R.id.wv_monthly);
         mWvMonthly = (WebView) view.findViewById(R.id.wv_monthly);
         initWebView();
 
@@ -36,14 +34,10 @@ public class MonthlyFragment extends Fragment {
     }
 
     private void initWebView() {
-        // WebSettings settings = mBwvMonthly.getSettings();
-        // settings.setJavaScriptEnabled(true);
-        // settings.setAppCacheEnabled(true);
-        // mBwvMonthly.setInitData(Application.storedUserToken);
-        // mBwvMonthly.loadUrl("http://120.77.246.73:5489/month");
         mWvMonthly.getSettings().setJavaScriptEnabled(true);
         mWvMonthly.setWebViewClient(new WebViewClient());
-        mWvMonthly.loadUrl("http://120.77.246.73:5489/month/" + Application.storedUserToken);
+        // http://120.77.246.73:5589/<token>/month
+        mWvMonthly.loadUrl("http://120.77.246.73:4600/" + Application.storedUserToken + "/month");
     }
 
     @Override
